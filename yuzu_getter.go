@@ -10,6 +10,8 @@ import (
 	"strings"
 )
 
+//获取Yuzu下载链接
+
 func YuzuGetter() string {
 	res, err := http.Get("https://github.com/pineappleEA/pineapple-src/tags")
 	if err != nil {

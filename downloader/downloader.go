@@ -72,14 +72,13 @@ func (d *Downloader) Download(resource Resource, progress *mpb.Progress) error {
 		int64(fileSize),
 		// 进度条前的修饰
 		mpb.PrependDecorators(
-			decor.CountersKibiByte("% .2f / % .2f"), // 已下载数量
-			decor.Percentage(decor.WCSyncSpace),     // 进度百分比
+			decor.CountersKibiByte("% 6.1f / % 6.1f"),
 		),
 		// 进度条后的修饰
 		mpb.AppendDecorators(
-			decor.EwmaETA(decor.ET_STYLE_GO, 90),
-			decor.Name(" ] "),
-			decor.EwmaSpeed(decor.UnitKiB, "% .2f", 60),
+			decor.EwmaETA(decor.ET_STYLE_MMSS, 90),
+			decor.Name(" || "),
+			decor.AverageSpeed(decor.UnitKiB, "% .2f"),
 		),
 	)
 	reader := bar.ProxyReader(resp.Body)

@@ -1,7 +1,7 @@
 package main
 
 import (
-	sed "Simple-Emu-Downloader"
+	"Simple-Emu-Downloader/get"
 	"fmt"
 	"strconv"
 )
@@ -12,9 +12,9 @@ var breaker int
 func main() {
 	for {
 		fmt.Println("* 欢迎使用Simple Emu Downloader by lkidszzzz *")
-		fmt.Println("输入 1 获取 Nitendo Switch 模拟器（推荐）：YUZU")
-		fmt.Println("输入 2 获取 Nitendo Switch 模拟器：Ryujinx")
-		fmt.Println("输入 3 获取 Nitendo 3DS 模拟器：Citra3DS")
+		fmt.Println("输入 1 获取 Nintendo Switch 模拟器（推荐）：YUZU")
+		fmt.Println("输入 2 获取 Nintendo Switch 模拟器：Ryujinx")
+		fmt.Println("输入 3 获取 Nintendo 3DS 模拟器：Citra3DS")
 		fmt.Println("输入 4 获取 Sony PSP 模拟器：PPSSPP")
 		fmt.Println("输入 5 退出下载器。")
 		fmt.Println("请输入对应的数字以选择您要下载的模拟器：")
@@ -41,13 +41,13 @@ func main() {
 				e, err := strconv.Atoi(yuzu)
 				switch {
 				case e == 1:
-					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", sed.YuzuGetter())
+					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", get.YuzuGetter())
 					breaker = 1
 				case e == 2:
-					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", sed.YuzuCDN1())
+					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", get.YuzuCDN1())
 					breaker = 1
 				case e == 3:
-					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", sed.YuzuCDN2())
+					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", get.YuzuCDN2())
 					breaker = 1
 				case e == 4:
 					breaker = 1
@@ -75,13 +75,13 @@ func main() {
 				e, err := strconv.Atoi(yuzu)
 				switch {
 				case e == 1:
-					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", sed.RyuGetter())
+					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", get.RyuGetter())
 					breaker = 1
 				case e == 2:
-					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", sed.RyuCDN1())
+					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", get.RyuCDN1())
 					breaker = 1
 				case e == 3:
-					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", sed.RyuCDN2())
+					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", get.RyuCDN2())
 					breaker = 1
 				case e == 4:
 					breaker = 1
@@ -94,6 +94,7 @@ func main() {
 				}
 			}
 		case e == 3:
+
 		case e == 4:
 		case e == 5:
 			breaker = 1

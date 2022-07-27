@@ -1,6 +1,7 @@
 package main
 
 import (
+	"Simple-Emu-Downloader/downloader"
 	"Simple-Emu-Downloader/get"
 	"fmt"
 	"strconv"
@@ -43,14 +44,23 @@ func main() {
 				case e == 1:
 					link := get.YuzuGetter()
 					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+					d := downloader.NewDownloader("./")
+					d.AppendResource(downloader.Namer(link), link)
+					d.Start()
 					breaker = 1
 				case e == 2:
 					link := get.YuzuCDN1()
 					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+					d := downloader.NewDownloader("./")
+					d.AppendResource(downloader.Namer(link), link)
+					d.Start()
 					breaker = 1
 				case e == 3:
 					link := get.YuzuCDN2()
 					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+					d := downloader.NewDownloader("./")
+					d.AppendResource(downloader.Namer(link), link)
+					d.Start()
 					breaker = 1
 				case e == 4:
 					breaker = 1
@@ -80,14 +90,23 @@ func main() {
 				case e == 1:
 					link := get.RyuGetter()
 					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+					d := downloader.NewDownloader("./")
+					d.AppendResource(downloader.Namer(link), link)
+					d.Start()
 					breaker = 1
 				case e == 2:
 					link := get.RyuCDN1()
 					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+					d := downloader.NewDownloader("./")
+					d.AppendResource(downloader.Namer(link), link)
+					d.Start()
 					breaker = 1
 				case e == 3:
 					link := get.RyuCDN2()
 					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+					d := downloader.NewDownloader("./")
+					d.AppendResource(downloader.Namer(link), link)
+					d.Start()
 					breaker = 1
 				case e == 4:
 					breaker = 1
@@ -131,14 +150,23 @@ func main() {
 						case e == 1:
 							link := get.CitraNightlyGetter(get.CitraNightlyVerGetter())
 							fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+							d := downloader.NewDownloader("./")
+							d.AppendResource(downloader.Namer(link), link)
+							d.Start()
 							breaker = 1
 						case e == 2:
 							link := get.CitraNightlyCDN1()
 							fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+							d := downloader.NewDownloader("./")
+							d.AppendResource(downloader.Namer(link), link)
+							d.Start()
 							breaker = 1
 						case e == 3:
 							link := get.CitraNightlyCDN2()
 							fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+							d := downloader.NewDownloader("./")
+							d.AppendResource(downloader.Namer(link), link)
+							d.Start()
 							breaker = 1
 						case e == 4:
 							breaker = 1
@@ -169,14 +197,23 @@ func main() {
 						case e == 1:
 							link := get.CitraCanaryGetter(get.CitraCanaryVerGetter())
 							fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+							d := downloader.NewDownloader("./")
+							d.AppendResource(downloader.Namer(link), link)
+							d.Start()
 							breaker = 1
 						case e == 2:
 							link := get.CitraCanaryCDN1()
 							fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+							d := downloader.NewDownloader("./")
+							d.AppendResource(downloader.Namer(link), link)
+							d.Start()
 							breaker = 1
 						case e == 3:
 							link := get.CitraCanaryCDN2()
 							fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+							d := downloader.NewDownloader("./")
+							d.AppendResource(downloader.Namer(link), link)
+							d.Start()
 							breaker = 1
 						case e == 4:
 							breaker = 1
@@ -215,6 +252,9 @@ func main() {
 				case e == 1:
 					link := get.PpssppGetter()
 					fmt.Println("下载链接（您也可以复制到您喜欢的下载器去进行下载）：", link)
+					d := downloader.NewDownloader("./")
+					d.AppendResource(downloader.Namer(link), link)
+					d.Start()
 					breaker = 1
 				case e == 2:
 					breaker = 1

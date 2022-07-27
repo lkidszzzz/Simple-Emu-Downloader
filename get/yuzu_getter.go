@@ -1,7 +1,7 @@
 package get
 
 import (
-	"Simple-Emu-Downloader/cdn"
+	"Simple-Emu-Downloader/downloader"
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
 	"io"
@@ -38,9 +38,9 @@ func YuzuGetter() string {
 }
 
 func YuzuCDN1() string {
-	return cdn.GithubCdn1(YuzuGetter())
+	return downloader.GithubCdn1(YuzuGetter())
 }
 
 func YuzuCDN2() string {
-	return cdn.GithubCdn2(YuzuGetter())
+	return downloader.GithubCdn2(YuzuGetter())
 }

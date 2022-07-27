@@ -1,7 +1,7 @@
 package get
 
 import (
-	"Simple-Emu-Downloader/cdn"
+	"Simple-Emu-Downloader/downloader"
 	"github.com/PuerkitoBio/goquery"
 	"io"
 	"log"
@@ -36,10 +36,10 @@ func RyuGetter() string {
 }
 
 func RyuCDN1() string {
-	return cdn.GithubCdn1(RyuGetter())
+	return downloader.GithubCdn1(RyuGetter())
 
 }
 
 func RyuCDN2() string {
-	return cdn.GithubCdn2(RyuGetter())
+	return downloader.GithubCdn2(RyuGetter())
 }

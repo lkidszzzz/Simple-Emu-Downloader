@@ -1,7 +1,7 @@
 package get
 
 import (
-	"Simple-Emu-Downloader/cdn"
+	"Simple-Emu-Downloader/downloader"
 	"github.com/PuerkitoBio/goquery"
 	"io"
 	"log"
@@ -54,9 +54,9 @@ func CitraNightlyGetter(ver string) string {
 }
 
 func CitraNightlyCDN1() string {
-	return cdn.GithubCdn1(CitraNightlyGetter(CitraNightlyVerGetter()))
+	return downloader.GithubCdn1(CitraNightlyGetter(CitraNightlyVerGetter()))
 }
 
 func CitraNightlyCDN2() string {
-	return cdn.GithubCdn2(CitraNightlyGetter(CitraNightlyVerGetter()))
+	return downloader.GithubCdn2(CitraNightlyGetter(CitraNightlyVerGetter()))
 }

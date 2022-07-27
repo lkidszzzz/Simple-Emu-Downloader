@@ -1,7 +1,7 @@
 package get
 
 import (
-	"Simple-Emu-Downloader/cdn"
+	"Simple-Emu-Downloader/downloader"
 	"github.com/PuerkitoBio/goquery"
 	"io"
 	"log"
@@ -54,9 +54,9 @@ func CitraCanaryGetter(ver string) string {
 }
 
 func CitraCanaryCDN1() string {
-	return cdn.GithubCdn1(CitraCanaryGetter(CitraCanaryVerGetter()))
+	return downloader.GithubCdn1(CitraCanaryGetter(CitraCanaryVerGetter()))
 }
 
 func CitraCanaryCDN2() string {
-	return cdn.GithubCdn2(CitraCanaryGetter(CitraCanaryVerGetter()))
+	return downloader.GithubCdn2(CitraCanaryGetter(CitraCanaryVerGetter()))
 }

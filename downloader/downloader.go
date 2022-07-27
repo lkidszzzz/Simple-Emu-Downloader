@@ -1,5 +1,7 @@
 package downloader
 
+//https://learnku.com/articles/46587
+
 import (
 	"fmt"
 	"github.com/vbauerster/mpb"

@@ -1,6 +1,7 @@
-package sed
+package get
 
 import (
+	"Simple-Emu-Downloader/cdn"
 	"github.com/PuerkitoBio/goquery"
 	"io"
 	"log"
@@ -29,18 +30,16 @@ func RyuGetter() string {
 		log.Fatal(err)
 	}
 	sel := doc.Find("h4[data-test-selector=\"tag-title\"]>a").First().Text()
-	link := "https://github.com/Ryujinx/release-channel-master/releases/download/" +
+	return "https://github.com/Ryujinx/release-channel-master/releases/download/" +
 		strings.Replace(strings.Replace(sel, "\n", "", -1), " ", "", -1) + "/ryujinx-" +
 		strings.Replace(strings.Replace(sel, "\n", "", -1), " ", "", -1) + "-win_x64.zip"
-	return link
 }
 
 func RyuCDN1() string {
-	str := RyuGetter()
-	return "https://ghproxy.com/" + str
+	return cdn.GithubCdn1(RyuGetter())
+
 }
 
 func RyuCDN2() string {
-	str := RyuGetter()
-	return "https://gh.api.99988866.xyz/" + str
+	return cdn.GithubCdn2(RyuGetter())
 }

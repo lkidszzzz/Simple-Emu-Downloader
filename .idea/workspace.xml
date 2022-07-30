@@ -44,12 +44,13 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Komori Chiyu/Documents/imooc-go/coolcar-master/coolcar&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Komori Chiyu\Documents\Github\Simple-Emu-Downloader\get" />
+      <recent name="D:\Komori Chiyu\Documents\Github\Simple-Emu-Downloader\downloader" />
       <recent name="D:\Komori Chiyu\Documents\Github\Simple-Emu-Downloader\cmd" />
     </key>
   </component>
@@ -57,7 +58,7 @@
     <configuration name="build" type="BatchConfigurationType" factoryName="Batch" temporary="true">
       <module name="Simple-Emu-Downloader" />
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="WORKING_DIRECTORY" value="D:\Komori Chiyu\Documents\Github\Simple-Emu-Downloader\cmd" />
+      <option name="WORKING_DIRECTORY" value="./cmd" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="build.bat" />
       <option name="PARAMETERS" value="" />

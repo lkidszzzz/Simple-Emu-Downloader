@@ -15,7 +15,7 @@ var key int
 func CitraCanaryVerGetter() string {
 	if modeChooser() == 1 {
 		key = 1
-		color.Notice.Prompt("已选择代理模式")
+		color.Light.Prompt("已选择代理模式")
 		res, err := proxy().Get("https://github.com/citra-emu/citra-canary/tags")
 		if err != nil {
 			log.Fatal(err)
@@ -36,7 +36,7 @@ func CitraCanaryVerGetter() string {
 		ver := strings.Replace(strings.Replace(doc.Find("h4[data-test-selector=\"tag-title\"]>a").First().Text(), "\n", "", -1), " ", "", -1)
 		return ver
 	} else {
-		color.Notice.Prompt("已选择直连模式")
+		color.Light.Prompt("已选择直连模式")
 		res, err := http.Get("https://github.com/citra-emu/citra-canary/tags")
 		if err != nil {
 			log.Fatal(err)

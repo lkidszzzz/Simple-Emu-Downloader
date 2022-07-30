@@ -10,7 +10,7 @@ import (
 
 func PpssppGetter() string {
 	if modeChooser() == 1 {
-		color.Notice.Prompt("已选择代理模式")
+		color.Light.Prompt("已选择代理模式")
 		res, err := proxy().Get("https://www.ppsspp.org/downloads_all.html")
 		if err != nil {
 			log.Fatal(err)
@@ -31,7 +31,7 @@ func PpssppGetter() string {
 		href, _ := doc.Find("p:contains(zip)").Find("a").First().Attr("href")
 		return "https://www.ppsspp.org/" + href
 	} else {
-		color.Notice.Prompt("已选择直连模式")
+		color.Light.Prompt("已选择直连模式")
 		res, err := http.Get("https://www.ppsspp.org/downloads_all.html")
 		if err != nil {
 			log.Fatal(err)

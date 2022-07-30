@@ -14,7 +14,7 @@ import (
 
 func RyuGetter() string {
 	if modeChooser() == 1 {
-		color.Notice.Prompt("已选择代理模式")
+		color.Light.Prompt("已选择代理模式")
 		res, err := proxy().Get("https://github.com/Ryujinx/release-channel-master/tags")
 		if err != nil {
 			log.Fatal(err)
@@ -37,7 +37,7 @@ func RyuGetter() string {
 			strings.Replace(strings.Replace(sel, "\n", "", -1), " ", "", -1) + "/ryujinx-" +
 			strings.Replace(strings.Replace(sel, "\n", "", -1), " ", "", -1) + "-win_x64.zip"
 	} else {
-		color.Notice.Prompt("已选择直连模式")
+		color.Light.Prompt("已选择直连模式")
 		res, err := http.Get("https://github.com/Ryujinx/release-channel-master/tags")
 		if err != nil {
 			log.Fatal(err)

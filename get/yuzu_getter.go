@@ -16,7 +16,7 @@ import (
 
 func YuzuGetter() string {
 	if modeChooser() == 1 {
-		color.Notice.Prompt("已选择代理模式")
+		color.Light.Prompt("已选择代理模式")
 		res, err := proxy().Get("https://github.com/pineappleEA/pineapple-src/tags")
 		if err != nil {
 			log.Fatal(err)
@@ -39,7 +39,7 @@ func YuzuGetter() string {
 		num := fmt.Sprintf(strings.Join(re.FindAllString(sel, -1), ""))
 		return "https://github.com/pineappleEA/pineapple-src/releases/download/EA-" + num + "/Windows-Yuzu-EA-" + num + ".7z"
 	} else {
-		color.Notice.Prompt("已选择直连模式")
+		color.Light.Prompt("已选择直连模式")
 		res, err := http.Get("https://github.com/pineappleEA/pineapple-src/tags")
 		if err != nil {
 			log.Fatal(err)

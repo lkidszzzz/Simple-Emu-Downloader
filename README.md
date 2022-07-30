@@ -24,9 +24,9 @@
 
 ### Installation
 
-❤ 您只需要从本repo的release里下载最新版本即可，无需任何其它依赖。
-
-❤ https://github.com/lkidszzzz/Simple-Emu-Downloader/releases
+❤ 您只需要从本repo的
+[release]: https://github.com/lkidszzzz/Simple-Emu-Downloader/releases/
+里下载最新版本即可，无需任何其它依赖。
 
 ### Usage
 

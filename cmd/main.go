@@ -26,7 +26,7 @@ func main() {
 		fmt.Print("	请输入对应的数字以选择您要下载的模拟器：")
 		_, err := fmt.Scan(&emu)
 		if err != nil {
-			fmt.Println("Unknown error.")
+			fmt.Println("Unknown err.")
 			return
 		}
 		e, err := strconv.Atoi(emu)
@@ -44,7 +44,7 @@ func main() {
 				fmt.Printf("	请输入对应的数字以选择下载通道：")
 				_, err := fmt.Scan(&input)
 				if err != nil {
-					fmt.Println("Unknown error.")
+					fmt.Println("Unknown err.")
 					return
 				}
 				e, err := strconv.Atoi(input)
@@ -102,7 +102,7 @@ func main() {
 				fmt.Printf("	请输入对应的数字以选择下载通道：")
 				_, err := fmt.Scan(&input)
 				if err != nil {
-					fmt.Println("Unknown error.")
+					fmt.Println("Unknown err.")
 					return
 				}
 				e, err := strconv.Atoi(input)
@@ -159,7 +159,7 @@ func main() {
 				fmt.Printf("	请输入对应的数字以选择您想要下载的版本：")
 				_, err := fmt.Scan(&input)
 				if err != nil {
-					fmt.Println("Unknown error.")
+					fmt.Println("Unknown err.")
 					return
 				}
 				e, err := strconv.Atoi(input)
@@ -177,7 +177,7 @@ func main() {
 						fmt.Printf("	请输入对应的数字以选择下载通道：")
 						_, err := fmt.Scan(&input)
 						if err != nil {
-							fmt.Println("Unknown error.")
+							fmt.Println("Unknown err.")
 							return
 						}
 						e, err := strconv.Atoi(input)
@@ -236,7 +236,7 @@ func main() {
 						fmt.Printf("	请输入对应的数字以选择下载通道：")
 						_, err := fmt.Scan(&input)
 						if err != nil {
-							fmt.Println("Unknown error.")
+							fmt.Println("Unknown err.")
 							return
 						}
 						e, err := strconv.Atoi(input)
@@ -303,7 +303,7 @@ func main() {
 				fmt.Printf("	请输入对应的数字以选择下载或返回：")
 				_, err := fmt.Scan(&input)
 				if err != nil {
-					fmt.Println("Unknown error.")
+					fmt.Println("Unknown err.")
 					return
 				}
 				e, err := strconv.Atoi(input)

@@ -140,7 +140,7 @@ func main() {
 				case e == 4:
 					breaker = 1
 				case err != nil || e < 1 || e > 4:
-					fmt.Println("	Warn:请按要求正确输入数字。")
+					color.Error.Prompt("	Warn:请按要求正确输入数字。")
 				}
 				if breaker == 1 {
 					breaker = 0
@@ -215,7 +215,7 @@ func main() {
 						case e == 4:
 							breaker = 1
 						case err != nil || e < 1 || e > 4:
-							fmt.Println("	Warn:请按要求正确输入数字。")
+							color.Error.Prompt("	Warn:请按要求正确输入数字。")
 						}
 						if breaker == 1 {
 							breaker = 0
@@ -274,7 +274,7 @@ func main() {
 						case e == 4:
 							breaker = 1
 						case err != nil || e < 1 || e > 4:
-							fmt.Println("	Warn:请按要求正确输入数字。")
+							color.Error.Prompt("	Warn:请按要求正确输入数字。")
 						}
 						if breaker == 1 {
 							breaker = 0
@@ -285,7 +285,7 @@ func main() {
 				case e == 3:
 					breaker = 1
 				case err != nil || e < 1 || e > 3:
-					fmt.Println("	Warn:请按要求正确输入数字。")
+					color.Error.Prompt("	Warn:请按要求正确输入数字。")
 				}
 				if breaker == 1 {
 					breaker = 0
@@ -321,7 +321,7 @@ func main() {
 				case e == 2:
 					breaker = 1
 				case err != nil || e < 1 || e > 2:
-					fmt.Println("	Warn:请按要求正确输入数字。")
+					color.Error.Prompt("	Warn:请按要求正确输入数字。")
 				}
 				if breaker == 1 {
 					breaker = 0
@@ -331,7 +331,7 @@ func main() {
 		case e == 5:
 			breaker = 1
 		case err != nil || e < 1 || e > 5:
-			fmt.Println("	Warn:请按要求正确输入数字。")
+			color.Error.Prompt("	Warn:请按要求正确输入数字。")
 		}
 		if breaker == 1 {
 			breaker = 0

@@ -1,6 +1,7 @@
 package get
 
 import (
+	"Simple-Emu-Downloader"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/gookit/color"
 	"io"
@@ -9,9 +10,9 @@ import (
 )
 
 func PpssppGetter() string {
-	if modeChooser() == 1 {
+	if sed.ModeChooser() == 1 {
 		color.Light.Prompt("已选择代理模式")
-		res, err := proxy().Get("https://www.ppsspp.org/downloads_all.html")
+		res, err := sed.Proxy().Get("https://www.ppsspp.org/downloads_all.html")
 		if err != nil {
 			log.Fatal(err)
 		}

@@ -1,4 +1,4 @@
-package get
+package sed
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 
 var agent int
 
-func modeChooser() int {
+func ModeChooser() int {
 	breaker := 0
 	var mode string
 	if agent == 1 || agent == 2 {

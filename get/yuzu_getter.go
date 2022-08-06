@@ -1,6 +1,7 @@
 package get
 
 import (
+	"Simple-Emu-Downloader"
 	"Simple-Emu-Downloader/downloader"
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
@@ -15,9 +16,9 @@ import (
 //获取Yuzu下载链接
 
 func YuzuGetter() string {
-	if modeChooser() == 1 {
+	if sed.ModeChooser() == 1 {
 		color.Light.Prompt("已选择代理模式")
-		res, err := proxy().Get("https://github.com/pineappleEA/pineapple-src/tags")
+		res, err := sed.Proxy().Get("https://github.com/pineappleEA/pineapple-src/tags")
 		if err != nil {
 			log.Fatal(err)
 		}

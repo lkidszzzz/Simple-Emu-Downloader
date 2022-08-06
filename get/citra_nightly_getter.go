@@ -1,6 +1,7 @@
 package get
 
 import (
+	"Simple-Emu-Downloader"
 	"Simple-Emu-Downloader/downloader"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/gookit/color"
@@ -11,10 +12,10 @@ import (
 )
 
 func CitraNightlyVerGetter() string {
-	if modeChooser() == 1 {
+	if sed.ModeChooser() == 1 {
 		key = 1
 		color.Light.Prompt("已选择代理模式")
-		res, err := proxy().Get("https://github.com/citra-emu/citra-nightly/tags")
+		res, err := sed.Proxy().Get("https://github.com/citra-emu/citra-nightly/tags")
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -59,7 +60,7 @@ func CitraNightlyVerGetter() string {
 
 func CitraNightlyGetter(ver string) string {
 	if key == 1 {
-		res, err := proxy().Get("https://github.com/citra-emu/citra-nightly/releases")
+		res, err := sed.Proxy().Get("https://github.com/citra-emu/citra-nightly/releases")
 		if err != nil {
 			log.Fatal(err)
 		}

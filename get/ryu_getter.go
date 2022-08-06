@@ -1,6 +1,7 @@
 package get
 
 import (
+	"Simple-Emu-Downloader"
 	"Simple-Emu-Downloader/downloader"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/gookit/color"
@@ -13,9 +14,9 @@ import (
 //获取Ryu下载链接
 
 func RyuGetter() string {
-	if modeChooser() == 1 {
+	if sed.ModeChooser() == 1 {
 		color.Light.Prompt("已选择代理模式")
-		res, err := proxy().Get("https://github.com/Ryujinx/release-channel-master/tags")
+		res, err := sed.Proxy().Get("https://github.com/Ryujinx/release-channel-master/tags")
 		if err != nil {
 			log.Fatal(err)
 		}

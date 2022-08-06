@@ -1,4 +1,4 @@
-package get
+package sed
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ import (
 
 var port string
 
-func proxy() *http.Client {
+func Proxy() *http.Client {
 	if port == "" {
 		for {
 			fmt.Println()
